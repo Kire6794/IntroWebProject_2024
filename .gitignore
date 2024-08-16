@@ -1,0 +1,242 @@
+# Visual Studio code files
+.vscode/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Visual Studio files
+*.user
+*.suo
+*.sln.docstates
+
+# Resharper cache, options, etc
+_ReSharper*/
+
+# NuGet
+packages/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# TypeScript
+*.tsbuildinfo
+
+# Visual Studio Code auto generated folder
+.vscode/
+
+# Rider
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# MonoDevelop
+*.pidb
+*.userprefs
+
+# Xamarin Studio
+*.suo
+*.user
+
+# Cake - Uncomment if you are using it
+# tools/**
+# !tools/packages.config
+
+# Tabs Studio
+*.tss
+
+# Telerik's JustMock configuration file
+*.jmconfig
+
+# Microsoft Azure Build Output
+csx/
+
+# GhostDoc plugin setting file
+*.GhostDoc.xml
+
+# JetBrains Rider
+.idea/
+
+# Rider
+.idea/
+
+# MPackage Files
+*.mpackage
+
+# Local History for JetBrains Rider and IntelliJ IDEA
+.idea/localHistory/
+
+# ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# TeamCity is a build add-in
+_TeamCity*
+
+# DotCover is a Code Coverage Tool
+*.dotCover
+
+# NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+
+# MightyMoose
+*.mm.*
+
+# Web workbench (sass)
+.sass-cache/
+
+# Installshield output folder
+[Ee]xpress/
+
+# DocProject is a documentation generator add-in
+DocProject/buildhelp/
+
+# Click-Once directory
+publish/
+
+# Publish Web Output
+*.Publish.xml
+
+# Microsoft Azure Web Apps
+App_Data/
+
+# Windows NVivo
+*.nvivo
+*.nvpx
+
+# Windows NSIS installers
+*.exe
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows SQL Server files
+*.mdf
+*.ldf
+
+# JetBrains Rider
+.idea/
+
+# ReSharper is a .NET coding add-in
+_ReSharper*/
+
+# JustCode is a .NET coding add-in
+.JustCode
+
+# IntelliTrace files
+*.iTrace
+
+# AVA.js
+node_modules
+
+# vue.js
+/dist
+
+# Compiled output
+/build
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Binary files
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.ico
+*.ttf
+*.woff
+*.woff2
+*.eot
+*.pdf
+
+# Visual Studio Code .env file
+.env
+
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle files
+gradle-wrapper.jar
+
+# JetBrains
+.idea/
+
+# Flutter/Dart/Pub related
+**/android/**
+**/ios/**
+
+# CocoaPods
+Pods/
+
+# Carthage
+/Carthage/Build
+
+# fastlane
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots
+**/fastlane/test_output
+
+# Jekyll
+.jekyll-cache/
+.jekyll-metadata
+.jekyll-include-cache/
+.bundle/
+
+# Virtual Studio Code workspace files
+.vscode/
+
+# macOS Finder
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# Yarn
+yarn-error.log
+/.vs/IntroWebPrograming_Project/config/applicationhost.config
+/.vs/IntroWebPrograming_Project/v17/.wsuo
+/.vs/VSWorkspaceState.json
+/.vs/ProjectSettings.json
+/.vs/IntroWebPrograming_Project/v17/DocumentLayout.json
+*.vsidx
+/.vs/slnx.sqlite-journal

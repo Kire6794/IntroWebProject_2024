@@ -1,0 +1,34 @@
+#main {
+    background-image: url('../img/HomeBackground.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-bottom: 10%;
+}
+
+.error {
+    color: red;
+    font-style: italic;
+}
+
+#login-form {
+    text-align: center;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+#space {
+    padding-top: 25%;
+}
+
+#login-button {
+    background-color: #B7C4CF;
+    border: 3px solid #967E76;
+    border-radius: 12px;
+    padding: 5px;
+    width: 40%;
+}
+
+#login {
+    width: 50%;
+    height: 30px;
+}

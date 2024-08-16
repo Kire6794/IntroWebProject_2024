@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Studio - Creative Studio Finder</title>
+    <link rel="stylesheet" href="../css/add-studio.css">
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="login.html">Log In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+    </header>
+    <main>
+        <h1>Add a New Studio</h1>
+        <form id="add-studio-form">
+            <div class="form-group">
+                <label for="studioName">Studio Name:</label>
+                <input type="text" id="studioName" name="studioName" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="area">Area (sq meters):</label>
+                <input type="number" id="area" name="area" required>
+            </div>
+            <div class="form-group">
+                <label for="type">Type:</label>
+                <select id="type" name="type" required>
+                    <option value="art">Art Studio</option>
+                    <option value="recording">Recording Studio</option>
+                    <option value="dance">Dance Studio</option>
+                    <option value="rehearsal">Rehearsal Space</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="capacity">Capacity:</label>
+                <input type="number" id="capacity" name="capacity" required>
+            </div>
+            <div class="form-group">
+                <label for="parking">Parking:</label>
+                <input type="checkbox" id="parking" name="parking">
+            </div>
+            <div class="form-group">
+                <label for="publicTransport">Public Transport:</label>
+                <input type="checkbox" id="publicTransport" name="publicTransport">
+            </div>
+            <div class="form-group">
+                <label for="availability">Availability:</label>
+                <input type="checkbox" id="availability" name="availability">
+            </div>
+            <div class="form-group">
+                <label for="rentalTerm">Rental Term:</label>
+                <select id="rentalTerm" name="rentalTerm" required>
+                    <option value="hourly">Hourly</option>
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" required>
+            </div>
+            <button type="submit">Add Studio</button>
+        </form>
+        <div id="studio-list"></div>
+    </main>
+    <footer id="footer">
+        <p>&copy; 2024 Creative Studio Finder. All rights reserved.</p>
+    </footer>
+    <script src="../js/add-studio.js" defer></script>
+</body>
+</html>

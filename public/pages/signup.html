@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/signup.css">
+    <title>Sign Up</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+        </ul>
+    </header>
+    <main class="signup-content">
+        <h1>Sign Up</h1>
+        <form id="signup-form" class="form-card">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <select id="role" required>
+                <option value="" disabled selected>Select Role</option>
+                <option value="renter">Renter</option>
+                <option value="studio-owner">Studio Owner</option>
+            </select>
+            <button type="submit">Sign Up</button>
+        </form>
+    </main>
+    <footer id="footer">
+        <p>&copy; 2024 Studio Finder. All rights reserved.</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/signup.js"></script>
+</body>
+</html>

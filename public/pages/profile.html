@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/signup.css">
+    <title>Update Profile</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="view-studios.html">Studio Listings</a></li>
+            <li id="addStudio"><a href="add-studio.html">Add Studio</a></li>
+            <li id="updateStudio"><a href="update-studio.html">Update Studio</a></li>
+
+
+            <li class="f-right"><button type="button" id="logout">Logout</button></li>
+            <li class="f-right"><span id="username">User name</span></li>
+        </ul>
+    </header>
+    <h1 id="name">Update Profile</h1>
+    <main class="profile-content">
+        <div class="form-card">
+            <h2>Current Information</h2>
+            <p><strong>Name:</strong> <span id="current-name"></span></p>
+            <p><strong>Phone Number:</strong> <span id="current-phone"></span></p>
+            <p><strong>Email:</strong> <span id="current-email"></span></p>
+        </div>
+        <div class="form-card">
+            <h2>Update Information</h2>
+            <form id="profile-form">
+                <label for="profile-name">Name:</label>
+                <input type="text" id="profile-name" placeholder="Name" required>
+                <label for="profile-phone">Phone Number:</label>
+                <input type="text" id="profile-phone" placeholder="Phone Number" required>
+                <label for="profile-email">Email:</label>
+                <input type="email" id="profile-email" placeholder="Email" required>
+                <button type="submit">Update Profile</button>
+            </form>
+        </div>
+    </main>
+    <footer id="footer">
+        <p>&copy; 2024 Studio Finder. All rights reserved.</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/profile.js"></script>
+</body>
+</html>

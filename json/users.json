@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "Bob Smith",
+        "phoneNumber": "234-567-8901",
+        "email": "bob@example.com",
+        "role": "studio-owner"
+    },
+    {
+        "id": 2,
+        "name": "David Brown",
+        "phoneNumber": "456-789-0123",
+        "email": "david@example.com",
+        "role": "studio-owner"
+    },
+    {
+        "id": 3,
+        "name": "Frank Miller",
+        "phoneNumber": "678-901-2345",
+        "email": "frank@example.com",
+        "role": "studio-owner"
+    },
+    {
+        "id": 4,
+        "name": "Alice Johnson",
+        "phoneNumber": "123-456-7890",
+        "email": "alice@example.com",
+        "role": "renter"
+    },
+    {
+        "id": 5,
+        "name": "Carol White",
+        "phoneNumber": "345-678-9012",
+        "email": "carol@example.com",
+        "role": "renter"
+    },
+    {
+        "id": 6,
+        "name": "Eve Davis",
+        "phoneNumber": "567-890-1234",
+        "email": "eve@example.com",
+        "role": "renter"
+    },
+    {
+        "id": 7,
+        "name": "Grace Wilson",
+        "phoneNumber": "789-012-3456",
+        "email": "grace@example.com",
+        "role": "renter"
+    },
+    {
+        "id": 8,
+        "name": "Henry Moore",
+        "phoneNumber": "890-123-4567",
+        "email": "henry@example.com",
+        "role": "studio-owner"
+    },
+    {
+        "id": 9,
+        "name": "Ivy Taylor",
+        "phoneNumber": "901-234-5678",
+        "email": "ivy@example.com",
+        "role": "renter"
+    },
+    {
+        "id": 10,
+        "name": "Jack Anderson",
+        "phoneNumber": "012-345-6789",
+        "email": "jack@example.com",
+        "role": "studio-owner"
+    }
+]

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="../js/common.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <title>Dashboard Page</title>
+</head>
+<body>
+    <div id="start">
+        <a href="#start">
+        </a>
+        <ul>
+            <li><a href="profile.html">Update Profile</a></li>
+            <li><a href="view-studios.html">Studio Listings</a></li>
+            <li id="addStudio"><a href="add-studio.html">Add Studio</a></li>
+            <li id="updateStudio"><a href="update-studio.html">Update Studio</a></li>
+
+
+            <li class="f-right"><button type="button" id="logout">Logout</button></li>
+            <li class="f-right"><span id="username">User name</span></li>
+        </ul>
+    </div>
+
+
+    <h1 id="name">Dashboard</h1>
+    <table id="dashboard-table" border="0">
+        <tr>
+            <td rowspan="2" width="20%">
+                <div id="graph-table">
+                </div>
+            </td>
+            <td width="60%">
+                <center><strong>Last 3 Studios Added</strong></center>
+                <br />
+                <ul id="studio-list"></ul>
+            </td>
+            <td rowspan="2" width="20%">
+                <div id="graph-table-type">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img id="im" src="" class="imgCenter" alt="">
+            </td>
+        </tr>
+    </table>
+
+
+    <footer id="footer">
+        <p>&copy; 2024 Studio Finder. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
