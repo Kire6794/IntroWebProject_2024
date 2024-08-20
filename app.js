@@ -1,3 +1,13 @@
+/*
+Group member’s name:
+Sandra Vera Gomez
+Erick Mulia Goycoolea
+Ali Khudhair
+Contribution in this file by Sandra and Erick
+*/
+
+
+
 const express = require('express');
 const routes = require('./routes.js');
 const cors = require('cors');

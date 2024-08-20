@@ -1,3 +1,14 @@
+/*
+Group member’s name:
+Sandra Vera Gomez
+Erick Mulia Goycoolea
+Ali Khudhair
+Contribution in this file by Sandra and Erick
+*/
+
+
+
+
 // Import the express module
 const express = require('express');
 const fs = require('fs');// Require the File System module

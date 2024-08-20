@@ -1,3 +1,10 @@
+/*
+Group member’s name:
+Sandra Vera Gomez
+Erick Mulia Goycoolea
+Ali Khudhair
+Contribution in this file by Erick Mulia Goycoolea
+*/
 document.addEventListener('DOMContentLoaded', function () {
     const signupForm = document.getElementById('signup-form');
 

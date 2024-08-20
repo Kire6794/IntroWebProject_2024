@@ -1,3 +1,10 @@
+/*
+Group member’s name:
+Sandra Vera Gomez
+Erick Mulia Goycoolea
+Ali Khudhair
+Contribution in this file by Sandra Vera Gomez
+*/
 function ValidateEmail() {
     fetch('/users')
         .then(response => response.json())

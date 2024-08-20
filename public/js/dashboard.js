@@ -1,3 +1,11 @@
+/*
+Group member’s name:
+Sandra Vera Gomez
+Erick Mulia Goycoolea
+Ali Khudhair
+Contribution in this file by Sandra Vera Gomez
+*/
+
 //Section session
 let user = CheckLoggedUser();
 console.log(user.role);

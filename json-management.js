@@ -1,3 +1,13 @@
+/*
+Group member’s name:
+Sandra Vera Gomez
+Erick Mulia Goycoolea
+Ali Khudhair
+Contribution in this file by Sandra Vera Gomez
+*/
+
+
+
 
 // Require the File System module and Path
 const fs = require('fs');

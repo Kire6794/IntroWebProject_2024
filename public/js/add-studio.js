@@ -1,3 +1,10 @@
+/*
+Group member’s name:
+Sandra Vera Gomez
+Erick Mulia Goycoolea
+Ali Khudhair
+Contribution in this file by Ali Khudhair
+*/
 document.addEventListener('DOMContentLoaded', () => {
     const addStudioForm = document.getElementById('add-studio-form');
     const studioList = document.getElementById('studio-list');

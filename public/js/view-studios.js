@@ -1,3 +1,11 @@
+/*
+Group member’s name:
+Sandra Vera Gomez
+Erick Mulia Goycoolea
+Ali Khudhair
+Contribution in this file by Sandra Vera Gomez
+*/
+
 let aStudios = [];
 let aStudiosOri = [];
 let aUsers = [];
