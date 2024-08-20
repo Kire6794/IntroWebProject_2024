@@ -36,20 +36,23 @@ function CheckLoggedUser() {
     }
 }
 
-function getStudios() {
+function getStudios(fnSuccess) {
     // Load studios from JSON file if not already loaded
     if (!localStorage.getItem(sessionStudios)) {
-        fetch('../json/studios.json')
+        fetch('/studios')
             .then(response => response.json())
             .then(data => {
                 localStorage.setItem(sessionStudios, JSON.stringify(data));
+                if (typeof fnSuccess !== 'undefined') {
+                    fnSuccess();
+                }
             });
     }
 }
 function getUsers() {
     // Load users from JSON file if not already loaded
     if (!localStorage.getItem(sessionUsers)) {
-        fetch('../json/users.json')
+        fetch('/users')
             .then(response => response.json())
             .then(data => {
                 localStorage.setItem(sessionUsers, JSON.stringify(data));

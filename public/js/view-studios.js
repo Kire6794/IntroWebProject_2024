@@ -6,15 +6,15 @@ let filter = {};
 let user = CheckLoggedUser();
 console.log(user.name);
 
-function getStudios() {
+function getStudiosFromStorage() {
     try {
         aStudios = JSON.parse(localStorage.getItem(sessionStudios));
-        aStudiosOri = aStudios;
         if (user.role === ownerRole) { //In case the user logged is an owner, the studios will be filtered by the id of the owner
             aStudios = aStudios.filter((studio) => studio.IdOwner == user.id);
         } else {
             aStudios = aStudios.filter((studio) => studio.Available == "Yes");
         }
+        aStudiosOri = aStudios;
         fillDataStudios();
     } catch (error) {
         console.error('Error:', error);
@@ -35,7 +35,7 @@ const rowStudio = `<tr>
         <td>{Actions}</td>
     </tr>`;
 
-function fillDataStudios(){
+function fillDataStudios() {
     let dataBodyTable = '';
     if (aStudios.length > 0) {
         aStudios.forEach(function (studio) {
@@ -47,9 +47,9 @@ function fillDataStudios(){
     $("#studios tbody").html(dataBodyTable)
 }
 
-function replaceObjectRow(studio){
+function replaceObjectRow(studio) {
     let row = rowStudio;
-    Object.entries(studio).forEach(function(property){ //Object.entries - property key-value pairs from object - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries
+    Object.entries(studio).forEach(function (property) { //Object.entries - property key-value pairs from object - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries
         row = row.replace(`{${property[0]}}`, property[1]);//0 = property name; 1 = property value; string Interpolation - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
     });
     row = row.replace('{Actions}', replaceActionRow(studio));
@@ -63,10 +63,10 @@ const editIconCode = 'edit';
 const deleteIconCode = 'delete';
 const ownerInfoIconCode = 'person';
 
-function replaceActionRow(studio){ //Google Fonts icon - https://fonts.google.com/icons?icon.set=Material+Icons&selected=Material+Icons+Outlined:home:&icon.size=24&icon.color=%23e8eaed
+function replaceActionRow(studio) { //Google Fonts icon - https://fonts.google.com/icons?icon.set=Material+Icons&selected=Material+Icons+Outlined:home:&icon.size=24&icon.color=%23e8eaed
     let actionRow = '';
     if (user.role === ownerRole) {
-        actionRow = actionRow.concat(iTagTable.replace('{FontCode}', editIconCode).replace('{ActionCode}', 2)).replace('{title}','Edit Studio');
+        actionRow = actionRow.concat(iTagTable.replace('{FontCode}', editIconCode).replace('{ActionCode}', 2)).replace('{title}', 'Edit Studio');
         actionRow = actionRow.concat(iTagTable.replace('{FontCode}', deleteIconCode).replace('{ActionCode}', 3)).replace('{title}', 'Delete Studio');
     } else { //renter role
         actionRow = actionRow.concat(iTagTable.replace('{FontCode}', ownerInfoIconCode).replace('{ActionCode}', 5)).replace('{title}', 'Owner Info');
@@ -78,10 +78,14 @@ function functionEditStudio(studioId) {
     window.location.href = "update-studio.html?studioId=" + studioId;
 }
 function functionDeleteStudio(studioId) {
-    let localStorageStudios = JSON.parse(localStorage.getItem(sessionStudios));
-    localStorageStudios = localStorageStudios.filter((studio) => studio.idStudio != studioId);
-    localStorage.setItem(sessionStudios, JSON.stringify(localStorageStudios));
-    getStudios();
+    $.ajax({
+        url: '/delete-studio/' + studioId,
+        type: 'DELETE',
+        success: function () {
+            localStorage.removeItem(sessionStudios);
+            getStudios(getStudiosFromStorage);
+        }
+    });
 }
 
 function functionShowOwnerInfo(studioId) {
@@ -154,12 +158,19 @@ function filterStudios() {
     fillDataStudios();
 }
 
+function resetFilters() {
+    $.each($(".input-search"), function (i, inputObj) {
+        $(inputObj).val(null);
+    });
+    getStudiosFromStorage();
+}
+
 $(document).ready(function () {
     if (user.role == "renter") {
         document.getElementById('addStudio').style.display = 'none';
         document.getElementById('updateStudio').style.display = 'none';
     }
-    getStudios();
+    getStudiosFromStorage();
     aUsers = JSON.parse(localStorage.getItem(sessionUsers));
 
     $(".input-search").on('blur', function (event) {

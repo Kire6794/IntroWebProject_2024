@@ -1,5 +1,5 @@
 function ValidateEmail() {
-    fetch('../json/users.json')
+    fetch('/users')
         .then(response => response.json())
         .then(users => {
             let person = users.find((person) => person.email == $("#login").val()); //find array https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find

@@ -47,29 +47,36 @@ li {
     width: 100%;
 }
 
-#studios td, #studios th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
+    #studios td, #studios th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
 
-#studios tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
+    #studios tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
 
-#studios tr:hover {
-    background-color: #ddd;
-}
+    #studios tr:hover {
+        background-color: #ddd;
+    }
 
-#studios th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #393E46;
-    color: white;
-}
+    #studios th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #393E46;
+        color: white;
+    }
 
 
 .input-search {
     height: 28px;
+    width: 100%;
+}
+
+.reset-button {
+    background: rgb(150 126 118);
+    color: white;
+    padding: 4px 4px 4px 4px;
     width: 100%;
 }

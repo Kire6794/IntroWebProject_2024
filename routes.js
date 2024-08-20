@@ -1,9 +1,87 @@
 // Import the express module
 const express = require('express');
-const fs = require('fs');
-const router = express.Router();
+const fs = require('fs');// Require the File System module
+const router = express.Router(); // Create  express routers
 
 /////////////////////////////SECTION SANDRA VERA [LOGIN PAGE, DASHBOARD PAGE AND VIEW STUDIOS PAGE]///////////////////////////////////////////////
+
+// Import local module
+const { displayFilePath, readJsonFile } = require('./json-management.js');
+
+// Set the file name
+const STUDIOS_DATA_FILENAME = './json/studios.json';
+const USERS_DATA_FILENAME = './json/users.json';
+
+//////////////////////////////////////////////////////////////////////////////
+
+
+// Import the path module
+const path = require('path');
+
+router.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+router.get('/login', function (req, res) {
+    res.sendFile(path.join(__dirname, 'public', 'login.html'));
+});
+
+router.get('/dashboard', function (req, res) {
+    res.sendFile(path.join(__dirname, 'public', 'pages/dashboard.html'));
+});
+
+router.get('/view-studios', function (req, res) {
+    res.sendFile(path.join(__dirname, 'public', 'pages/view-studios.html'));
+});
+
+//////////////////////////////////////////////////////////////////////////////
+
+// Login page connect with users.json for validate Email and display information owner in view-studios.html
+
+router.get('/users', async (req, res) => {
+    let existingData = await readJsonFile(USERS_DATA_FILENAME);
+    res.json(existingData);
+});
+
+////////////////////////////////////////////////////////////////////////////
+// Dashboard page connect with studios.json for get information about studios 
+
+router.get('/studios', async (req, res) => {
+    let existingData = await readJsonFile(STUDIOS_DATA_FILENAME);
+    res.json(existingData);
+});
+
+////////////////////////////////////////////////////////////////////////////
+// View-Studios page connect with studios.json for delete information about studios
+
+router.delete('/delete-studio/:id', async (req, res) => {
+    let existingData = await readJsonFile(STUDIOS_DATA_FILENAME);
+    let found = existingData.find(function (item) {
+        return item.idStudio === parseInt(req.params.id);
+    });
+    if (found) {
+        let targetStudio = existingData.indexOf(found);
+
+        existingData.splice(targetStudio, 1);
+        // convert JSON object to a string
+        const dataRegis = JSON.stringify(existingData);
+
+        // write registration in registrations.json
+        fs.writeFileSync(STUDIOS_DATA_FILENAME, dataRegis);
+
+        res.sendStatus(204);
+    } else {
+        res.sendStatus(500);
+    }
+});
+
+
+
+
+
+
+
+
 
 
 
@@ -52,7 +130,7 @@ router.post('/profile/update', (req, res) => {
     res.status(200).send('Profile updated successfully!');
 });
 
-module.exports = router;
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //--------------------------------------------------------------------------
 
@@ -69,3 +147,13 @@ module.exports = router;
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+// Error handling route
+router.use((req, res) => {
+    res.status(404).sendFile(path.join(__dirname, 'public', 'pages/error.html'));
+});
+
+module.exports = router;
